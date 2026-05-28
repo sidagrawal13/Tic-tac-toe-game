@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="loginPage" class="container login-box">
+    <h1>🎮 Tic Tac Toe</h1>
+
+    <select id="loginMode">
+        <option value="pvp">Player vs Player</option>
+        <option value="ai">Player vs Computer</option>
+    </select>
+
+    <input type="text" id="player1" placeholder="Enter Player 1 Name">
+<div id="player2Box">
+    <input type="text" id="player2" placeholder="Enter Player 2 Name">
+</div>
+    <button id="startBtn">Start Game</button>
+</div>
+
+<!-- GAME PAGE -->
+<div id="gamePage" style="display:none;">
+    
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+
+        <p id="modeLabel"></p>
+        <p id="status"></p>
+
+        <select id="mode">
+            <option value="pvp">Player vs Player</option>
+            <option value="ai">Player vs Computer</option>
+        </select>
+
+        <div class="scoreboard">
+            <p>X: <span id="x-score">0</span></p>
+            <p>O: <span id="o-score">0</span></p>
+            <p>Draws: <span id="draw-score">0</span></p>
+        </div>
+
+        <div class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <button id="restart">Restart Game</button>
+        <button id="resetScore">Reset Score</button>
+        <button id="undo">Undo</button>
+
+        <!-- NEW BACK BUTTON -->
+        <button id="backBtn">Back to Login</button>
+
+        <audio id="clickSound" src="click.mp3"></audio>
+<audio id="winSound" src="win.mp3"></audio>
+<audio id="drawSound" src="draw.mp3"></audio>
+    
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

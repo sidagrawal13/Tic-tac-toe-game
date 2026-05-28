@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #141E30, #243B55);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 35px 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 340px;
+}
+
+/* LOGIN BOX (DIFFERENT LOOK) */
+.login-box {
+    background: rgba(0,0,0,0.4);
+    border: 2px solid rgba(255,255,255,0.4);
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+/* Inputs + Select */
+#loginPage input,
+#loginPage select {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+/* Status (TURN DISPLAY IMPROVED) */
+#status {
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+/* TURN */
+.turn {
+    background: rgba(0, 136, 255, 0.25);
+    border: 1px solid #0088ff;
+}
+
+/* WIN */
+.win {
+    background: rgba(255, 215, 0, 0.25);
+    border: 1px solid #FFD700;
+    color: #FFD700;
+    text-shadow: 0 0 10px #FFD700;
+}
+
+/* DRAW */
+.draw {
+    background: rgba(255, 105, 180, 0.25);
+    border: 1px solid #ff69b4;
+    color: #ff69b4;
+}
+
+/* Board */
+.board {
+    width: 300px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+/* Cells */
+.cell {
+    width: 90px;
+    height: 90px;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 38px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+
+/* Hover */
+.cell:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.08);
+}
+
+/* Click Animation */
+.pop {
+    transform: scale(1.2);
+}
+
+/* Winner Cells */
+.winner-cell {
+    background-color: #FFD700 !important;
+    color: black;
+    animation: glow 0.5s infinite alternate, pulse 0.6s ease;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 5px #FFD700; }
+    to { box-shadow: 0 0 25px #FFD700; }
+}
+
+/* Glow Animation */
+@keyframes glow {
+    from { box-shadow: 0 0 5px #4CAF50; }
+    to { box-shadow: 0 0 20px #4CAF50; }
+}
+
+/* Disabled Cells */
+.cell.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
+    margin: 8px 5px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff7a18, #ff512f);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Player 2 Smooth Hide */
+#player2Box {
+    transition: 0.3s ease;
+}
+
+/* ========= MODERN UI UPGRADE ========= */
+
+/* Smooth fade animation */
+.container {
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Better board spacing */
+.board {
+    margin: 25px auto;
+}
+
+/* Cell hover glow */
+.cell:hover {
+    box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+/* Click animation */
+.cell:active {
+    transform: scale(0.95);
+}
+
+/* Status highlight (TURN) */
+#status {
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Buttons more premium */
+button {
+    letter-spacing: 0.5px;
+}
+
+/* Button active effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Scoreboard style */
+.scoreboard {
+    background: rgba(255,255,255,0.1);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+/* Login title emphasis */
+.login-box h1 {
+    font-size: 34px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+/* Input focus glow */
+#loginPage input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+/* Winner pulse effect */
+.winner-cell {
+    animation: glow 0.5s infinite alternate, pulse 0.6s ease;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
